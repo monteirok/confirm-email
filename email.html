@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Mountain Mixology</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        * {
+            font-family: 'Inter', sans-serif;
+            user-select: none;
+        }
         body {
             font-family: 'Inter', sans-serif;
             background-color: #1a1a1a;
@@ -22,13 +27,8 @@
             text-align: center;
         }
         .logo {
-            max-width: 200px;
-            margin-bottom: 20px;
-        }
-        @media (prefers-color-scheme: dark) {
-            .logo {
-                content: url('https://github.com/monteirok/confirm-email/blob/main/logos/logo-dark.png?raw=true');
-            }
+            max-width: 220px;
+            margin-bottom: 40px;
         }
         @media (prefers-color-scheme: light) {
             .logo {
@@ -38,11 +38,14 @@
         h1 {
             color: #d4af37;
             font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+            margin-bottom: -10px;
         }
         p {
             color: #ddd;
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.5;
         }
         .btn {
             display: inline-block;
@@ -51,8 +54,7 @@
             padding: 12px 24px;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 16px;
-            margin-top: 20px;
+            font-size: 18px;
             font-weight: bold;
             transition: all 0.3s;
         }
@@ -68,15 +70,21 @@
 </head>
 <body>
     <div class="email-container">
-        <img src="https://your-logo-url.com/logo-dark.jpeg" alt="Mountain Mixology Logo" class="logo">
-        <h1>Welcome to Mountain Mixology!</h1>
-        <p>Thank you for signing up! We’re thrilled to have you on board. Mountain Mixology brings you the best premium cocktail catering service in Canmore.</p>
-        <p>Please confirm your email address by clicking the button below:</p>
-        <a href="{{confirmation_link}}" class="btn">Confirm Your Email</a>
-        <p>If you did not sign up for Mountain Mixology, you can safely ignore this email.</p>
-        <div class="footer">
-            <p>&copy; 2025 Mountain Mixology. All rights reserved.</p>
-            <p>123 Mountain Ave, Canmore, AB, Canada</p>
+        <header>
+            <a href="https://mountainmixoloy.ca" target="_blank">
+                <img src="https://github.com/monteirok/confirm-email/blob/main/logos/logo-light.png?raw=true" alt="Mountain Mixology Logo" class="logo">
+            </a>
+        </header>
+        <div style="display:flex; flex-direction:column; justify-content:center; align-items:center;gap:1px;">
+            <h1>Thanks for Signing Up!</h1>
+            <div>
+                <p class="mp0 mb-">We're thrilled to have you on board! Please <b>confirm your email address</b> by clicking the button below:</p>
+            </div>
+            <a href="{{confirmation_link}}" class="btn" style="margin: 12px 0 12px 0;">Confirm Your Email</a>
+            <div class="footer" style="margin-top: 30px;">
+                <p style="margin:3px;font-size: 13.5px;">If you did not sign up for Mountain Mixology, you can safely ignore this email.</p>
+                <p style="margin:0; font-style: italic; font-size: 13.5px; color: #848484; opacity: .9; font-weight: 400;">&copy; 2025 <a href="https://mountainmixology.ca" style="color: #848484; opacity: .8; text-decoration: none;">Mountain Mixology</ah>. All rights reserved.</p>
+            </div>
         </div>
     </div>
 </body>
